@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1f2937;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+button {
+    padding: 12px 22px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #4f46e5;
+    color: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    transition:
+        transform 0.2s,
+        background 0.2s;
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 25px;
+}
+
+.user-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.user-header {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    padding: 20px;
+}
+
+.user-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.user-header span {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.user-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.info-block {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.info-block strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #374151;
+}
+
+.company {
+    background: #eef2ff;
+    border-left: 4px solid #4f46e5;
+}
+
+.company em {
+    display: block;
+    font-style: normal;
+    color: #4f46e5;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.empty {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 40px;
+}
