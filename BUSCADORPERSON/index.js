@@ -1,4 +1,4 @@
-// index.js
+
 
 const users = [
   { id: 1, name: "Alejandro Gómez", email: "alejandro.gomez@example.com" },

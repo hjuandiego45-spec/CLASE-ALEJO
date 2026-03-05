@@ -4,7 +4,6 @@ function obtenerNumero() {
     setTimeout(() => {
       mensaje(10);
     }, 2000);
-
   });
 }
 

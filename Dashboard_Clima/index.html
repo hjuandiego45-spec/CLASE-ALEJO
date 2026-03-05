@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard de Clima</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <header>
+      <h1>CLIMA DE DIFERENTES CIUDADES</h1>
+    </header>
+
+    <main>
+      <section class="search-section">
+        <form id="search-form">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Escribe una ciudad..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section id="error-messag" class="hidden"></section>
+
+      <section id="weather-result" class="hidden"></section>
+    </main>
+
+    <script type="module" src="/Dashboard_Clima/script/main.js"></script>
+
+  </body>
+</html>

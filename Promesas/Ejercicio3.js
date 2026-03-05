@@ -30,3 +30,4 @@ obtenerEdad()
   .catch((error) => {
     console.log(error);
   });
+  
