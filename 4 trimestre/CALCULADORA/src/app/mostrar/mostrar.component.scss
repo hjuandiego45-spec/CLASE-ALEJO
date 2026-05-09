@@ -1,0 +1,20 @@
+.pantalla {
+  min-height: 292px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 8px 24px;
+  color: #fff;
+  font-size: clamp(72px, 20vw, 96px);
+  font-weight: 500;
+  line-height: 1;
+  text-align: right;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (max-height: 760px) {
+  .pantalla {
+    min-height: 210px;
+  }
+}

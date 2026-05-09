@@ -1,0 +1,11 @@
+<div class="contenedor">
+  <h1>Cambio de colores</h1>
+
+  <app-cubo-colores [colorCubo]="colorCubo"></app-cubo-colores>
+
+  <p class="color-info">Color seleccionado: {{ nombreColorSeleccionado }}</p>
+
+  <app-cambiar-colores
+    (colorSeleccionado)="cambiarColor($event)"
+  ></app-cambiar-colores>
+</div>

@@ -1,0 +1,80 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.telefono {
+  min-height: 100vh;
+  max-width: 430px;
+  margin: 0 auto;
+  background: #000;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 42px 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.estado {
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.iconos-superiores {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 26px 0;
+}
+
+.icono {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #151515;
+  border: 1px solid #282828;
+  color: #f2f2f2;
+  font-size: 31px;
+  font-weight: 700;
+}
+
+.calculadora {
+  min-height: calc(100vh - 118px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 15px 28px;
+  box-sizing: border-box;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 390px) {
+  .barra-superior {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .calculadora {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .teclado {
+    gap: 7px;
+  }
+}

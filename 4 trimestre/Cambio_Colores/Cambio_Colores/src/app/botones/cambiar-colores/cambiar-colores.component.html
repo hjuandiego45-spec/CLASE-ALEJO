@@ -1,0 +1,9 @@
+<div class="botones">
+  <button
+    *ngFor="let color of colores"
+    class="color-btn"
+    (click)="seleccionarColor(color)"
+  >
+    {{ color.nombre }}
+  </button>
+</div>

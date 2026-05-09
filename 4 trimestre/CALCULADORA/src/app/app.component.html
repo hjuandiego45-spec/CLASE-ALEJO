@@ -1,0 +1,42 @@
+<div class="telefono">
+  <div class="barra-superior">
+    <span class="hora">12:13</span>
+    <span class="estado">▮▮▮ 5G 57</span>
+  </div>
+
+  <div class="iconos-superiores">
+    <div class="icono">◴</div>
+    <div class="icono">▦</div>
+  </div>
+
+  <main class="calculadora">
+    <app-mostrar [valor]="valorPantalla"></app-mostrar>
+
+    <section class="teclado">
+      <app-boton texto="⌫" tipo="gris" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="AC" tipo="gris" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="%" tipo="gris" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="÷" tipo="naranja" (clickBoton)="procesar($event)"></app-boton>
+
+      <app-boton texto="7" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="8" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="9" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="×" tipo="naranja" (clickBoton)="procesar($event)"></app-boton>
+
+      <app-boton texto="4" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="5" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="6" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="−" tipo="naranja" (clickBoton)="procesar($event)"></app-boton>
+
+      <app-boton texto="1" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="2" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="3" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="+" tipo="naranja" (clickBoton)="procesar($event)"></app-boton>
+
+      <app-boton texto="+/−" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="0" (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="." (clickBoton)="procesar($event)"></app-boton>
+      <app-boton texto="=" tipo="naranja" (clickBoton)="procesar($event)"></app-boton>
+    </section>
+  </main>
+</div>
