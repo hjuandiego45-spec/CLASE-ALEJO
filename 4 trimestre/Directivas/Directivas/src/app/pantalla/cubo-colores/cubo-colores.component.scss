@@ -1,0 +1,62 @@
+.contenedor {
+  min-height: 100vh;
+  padding: 45px 36px;
+  background-color: #f3f4f6;
+}
+
+.boton-principal {
+  width: 180px;
+  height: 82px;
+  border: none;
+  border-radius: 17px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boton-principal:disabled {
+  background-color: #86a5ee;
+  cursor: not-allowed;
+}
+
+.contenido {
+  margin-top: 75px;
+}
+
+.sin-datos {
+  margin-left: 45px;
+  font-size: 31px;
+}
+
+.lista {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.item {
+  padding: 30px 36px;
+  border-bottom: 1px solid #d9dde4;
+  font-size: 31px;
+  background-color: white;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+hr {
+  margin-top: 85px;
+  border: none;
+  border-top: 1px solid #cfd4dc;
+}
+
+.estado {
+  margin-top: 86px;
+  margin-left: 36px;
+  font-size: 31px;
+}

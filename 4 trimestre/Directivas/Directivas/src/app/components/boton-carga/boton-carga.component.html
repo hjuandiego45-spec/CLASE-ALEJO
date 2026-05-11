@@ -1,0 +1,15 @@
+<button
+  class="boton"
+  [class.boton-cargando]="estado === 'cargando'"
+  (click)="ejecutarAccion()"
+  [disabled]="estado === 'cargando'">
+
+  <span *ngIf="estado !== 'exito'">
+    Cargar
+  </span>
+
+  <span *ngIf="estado === 'exito'">
+    Borrar
+  </span>
+
+</button>

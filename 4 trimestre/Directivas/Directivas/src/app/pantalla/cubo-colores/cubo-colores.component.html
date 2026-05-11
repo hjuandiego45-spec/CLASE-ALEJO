@@ -1,0 +1,39 @@
+<section class="contenedor">
+
+  <button
+    class="boton-principal"
+    type="button"
+    [disabled]="estado === 'cargando'"
+    (click)="cargarOBorrar()">
+    {{ textoBoton() }}
+  </button>
+
+  <div class="contenido">
+
+    <p class="sin-datos" *ngIf="estado !== 'exito'">
+      No hay datos
+    </p>
+
+    <div class="lista" *ngIf="estado === 'exito'">
+      <div class="item" *ngFor="let elemento of elementos">
+        {{ elemento }}
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <p class="estado" *ngIf="estado === 'pendiente'">
+    Pendiente...
+  </p>
+
+  <p class="estado" *ngIf="estado === 'cargando'">
+    Cargando...
+  </p>
+
+  <p class="estado" *ngIf="estado === 'exito'">
+    Listo
+  </p>
+
+</section>

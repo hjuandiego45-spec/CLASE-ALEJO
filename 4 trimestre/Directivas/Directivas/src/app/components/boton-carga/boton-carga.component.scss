@@ -1,0 +1,31 @@
+.boton {
+
+  background: #7c3aed;
+  color: white;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 18px 45px;
+
+  font-size: 26px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+.boton:hover {
+
+  background: #6d28d9;
+
+}
+
+.boton-cargando {
+
+  background: #b197fc;
+  cursor: not-allowed;
+
+}
