@@ -1,0 +1,15 @@
+<div
+  class="nota"
+  *ngFor="let nota of notas; let i = index"
+>
+
+  <p>{{ nota }}</p>
+
+  <button
+    class="eliminar"
+    (click)="eliminarNota(i)"
+  >
+    Eliminar Nota
+  </button>
+
+</div>

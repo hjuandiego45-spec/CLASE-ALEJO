@@ -1,0 +1,14 @@
+<div class="contenedor">
+
+  <h1>NOTAS</h1>
+
+  <app-botones
+    (notaAgregada)="agregarNota($event)">
+  </app-botones>
+
+  <app-pantalla
+    [notas]="notas"
+    (notaEliminada)="eliminarNota($event)">
+  </app-pantalla>
+
+</div>
