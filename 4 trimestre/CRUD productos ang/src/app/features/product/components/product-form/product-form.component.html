@@ -1,0 +1,8 @@
+
+<div class="form-card">
+<label>Nombre</label>
+<input type="text" [(ngModel)]="nombre" name="nombre">
+<label>Precio</label>
+<input type="number" [(ngModel)]="precio" name="precio">
+<button [disabled]="!valido()" (click)="crear()">Crear</button>
+</div>

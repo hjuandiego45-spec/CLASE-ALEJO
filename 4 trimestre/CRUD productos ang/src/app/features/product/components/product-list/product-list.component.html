@@ -1,0 +1,18 @@
+<div *ngIf="ps.getProducts().length === 0" class="empty-container">
+
+  <div class="icon">
+    !¡
+  </div>
+
+  <h2>No hay productos registrados</h2>
+
+</div>
+
+<div *ngIf="ps.getProducts().length > 0">
+
+  <app-product-card
+    *ngFor="let p of ps.getProducts()"
+    [product]="p">
+  </app-product-card>
+
+</div>
