@@ -1,0 +1,8 @@
+<div class="toolbar" *ngIf="users.length === 0; else userList">
+  <button (click)="onClick()" class="load-users-btn">
+    Cargar usuarios
+  </button>
+</div>
+<ng-template #userList>
+<app-user-list [users]="users"></app-user-list>
+</ng-template>

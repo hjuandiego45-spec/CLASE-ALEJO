@@ -1,0 +1,11 @@
+<header class="albums-header">
+  <h1>Lista de albunes</h1>
+  <p> la información carga desde la API.</p>
+</header>
+
+<div class="albums-grid">
+  <app-album-card
+    *ngFor="let albumElement of albums"
+    [album]="albumElement">
+  </app-album-card>
+</div>
