@@ -1,0 +1,8 @@
+<section class="app-container">
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <app-album-list
+    *ngIf="!isLoading"
+    [albums]="albums">
+  </app-album-list>
+</section>

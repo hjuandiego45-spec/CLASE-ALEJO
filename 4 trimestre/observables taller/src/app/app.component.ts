@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
           this.isLoading = false;
         },
         error: (error) => {
-          console.error('Error al cargar los álbumes:', error);
+          console.error('Error al cargar los albunes:', error);
           this.isLoading = false;
         }
       });
