@@ -1,0 +1,69 @@
+<div class="page">
+
+  <header class="header">
+    <h1>Listado de Pokémones</h1>
+  </header>
+
+  <div *ngIf="loading" class="loading">
+    Cargando Pokémones...
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div class="pokemon-container" *ngIf="!loading && !errorMessage">
+
+    <div class="pokemon-card" *ngFor="let pokemon of pokemons">
+
+      <img [src]="pokemon.image" [alt]="pokemon.name">
+
+      <h2>{{ pokemon.name | titlecase }}</h2>
+
+      <p><strong>ID:</strong> {{ pokemon.id }}</p>
+
+      <p><strong>Altura:</strong> {{ pokemon.height }}</p>
+
+      <p><strong>Peso:</strong> {{ pokemon.weight }}</p>
+
+      <p><strong>Experiencia base:</strong> {{ pokemon.baseExperience }}</p>
+
+      <p><strong>Tipos:</strong> {{ pokemon.types.join(', ') }}</p>
+
+      <p><strong>Habilidades:</strong> {{ pokemon.abilities.join(', ') }}</p>
+
+      <h3>Estadísticas</h3>
+
+      <ul>
+        <li *ngFor="let stat of pokemon.stats">
+          {{ stat.name }}: {{ stat.value }}
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="pagination">
+
+    <button
+      (click)="previousPage()"
+      [disabled]="offset === 0 || loading">
+
+       Anterior
+
+    </button>
+
+    <span>Página {{ currentPage }}</span>
+
+    <button
+      (click)="nextPage()"
+      [disabled]="loading">
+
+      Siguiente 
+
+    </button>
+
+  </div>
+
+</div>
