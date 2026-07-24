@@ -1,0 +1,1 @@
+<div *ngIf='ps.getProducts().length===0'>No hay productos para mostrar</div><app-product-card *ngFor='let p of ps.getProducts()' [product]='p'></app-product-card>

@@ -1,0 +1,14 @@
+PASOS PARA EJECUTAR EL PROYECTO
+
+1. Descomprime el ZIP.
+2. Abre la carpeta Directivas en Visual Studio Code.
+3. Abre la terminal en Visual Studio Code.
+4. Ejecuta:
+   npm install
+5. Luego ejecuta:
+   ng serve
+6. Abre el navegador en:
+   http://localhost:4200
+
+IMPORTANTE:
+Debes ejecutar los comandos dentro de la carpeta donde está el archivo angular.json.
