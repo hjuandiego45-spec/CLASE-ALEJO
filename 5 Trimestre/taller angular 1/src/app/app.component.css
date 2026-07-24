@@ -1,0 +1,106 @@
+.container {
+  width: min(100% - 32px, 620px);
+  margin: 32px auto;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+form,
+.result {
+  border: 1px solid #cccccc;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #999999;
+  background: #ffffff;
+  color: #111111;
+}
+
+input:focus {
+  outline: 2px solid #333333;
+  outline-offset: 1px;
+}
+
+input.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty {
+  border-color: #b00020;
+}
+
+.error {
+  margin-top: 5px;
+  color: #b00020;
+  font-size: 14px;
+}
+
+.password-row {
+  display: flex;
+  gap: 8px;
+}
+
+.password-row input {
+  flex: 1;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.check-row label {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 9px 16px;
+  border: 1px solid #111111;
+  background: #111111;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #ffffff;
+  color: #111111;
+}
+
+button:disabled {
+  border-color: #aaaaaa;
+  background: #dddddd;
+  color: #777777;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result p:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,103 @@
+<main class="container">
+  <h1>Registro de usuario</h1>
+  <p>Complete todos los campos para realizar el registro</p>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="submit()" novalidate>
+    <div class="field">
+      <label for="fullName">Nombre completo</label>
+      <input id="fullName" type="text" formControlName="fullName">
+      @if (isInvalid('fullName')) {
+        <div class="error">
+          @if (controls.fullName.hasError('required')) { El nombre es obligatorio }
+          @if (controls.fullName.hasError('minlength')) { El nombre debe tener mínimo 3 caracteres }
+        </div>
+      }
+    </div>
+
+    <div class="field">
+      <label for="email">Correo electrónico</label>
+      <input id="email" type="email" formControlName="email">
+      @if (isInvalid('email')) {
+        <div class="error">
+          @if (controls.email.hasError('required')) { El correo es obligatorio }
+          @if (controls.email.hasError('email')) { Ingrese un correo válido }
+        </div>
+      }
+    </div>
+
+    <div class="field">
+      <label for="username">Nombre de usuario</label>
+      <input id="username" type="text" formControlName="username">
+      @if (isInvalid('username')) {
+        <div class="error">
+          @if (controls.username.hasError('required')) { El usuario es obligatorio }
+          @if (controls.username.hasError('pattern') || controls.username.hasError('spacesNotAllowed')) {
+            Solo se permiten letras, números y guion bajo, sin espacios
+          }
+        </div>
+      }
+    </div>
+
+    <div class="field">
+      <label for="password">Contraseña</label>
+      <div class="password-row">
+        <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password">
+        <button class="secondary" type="button" (click)="showPassword = !showPassword">
+          {{ showPassword ? 'Ocultar' : 'Mostrar' }}
+        </button>
+      </div>
+      @if (isInvalid('password')) {
+        <div class="error">
+          @if (controls.password.hasError('required')) { La contraseña es obligatoria }
+          @if (controls.password.hasError('minlength')) { Debe tener mínimo 8 caracteres }
+        </div>
+      }
+    </div>
+
+    <div class="field">
+      <label for="confirmPassword">Confirmar contraseña</label>
+      <input id="confirmPassword" [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword">
+      @if (isInvalid('confirmPassword')) {
+        <div class="error">La confirmación es obligatoria</div>
+      }
+      @if (registrationForm.hasError('passwordsDoNotMatch') && (controls.confirmPassword.touched || controls.confirmPassword.dirty)) {
+        <div class="error">Las contraseñas no coinciden</div>
+      }
+    </div>
+
+    <div class="field">
+      <label for="age">Edad</label>
+      <input id="age" type="number" formControlName="age">
+      @if (isInvalid('age')) {
+        <div class="error">
+          @if (controls.age.hasError('required')) { La edad es obligatoria }
+          @if (controls.age.hasError('min')) { La edad mínima es 15 años }
+          @if (controls.age.hasError('max')) { La edad máxima es 90 años }
+        </div>
+      }
+    </div>
+
+    <div class="check-row">
+      <input id="terms" type="checkbox" formControlName="terms">
+      <label for="terms">Acepto los términos y condiciones</label>
+    </div>
+    @if (isInvalid('terms')) {
+      <div class="error">Debe aceptar los términos y condiciones</div>
+    }
+
+    <div class="actions">
+      <button type="submit" [disabled]="registrationForm.invalid">Registrar</button>
+      <button class="secondary" type="button" (click)="clearForm()">Limpiar</button>
+    </div>
+  </form>
+
+  @if (submittedUser) {
+    <section class="result">
+      <h2>Usuario registrado</h2>
+      <p><strong>Nombre:</strong> {{ submittedUser.fullName }}</p>
+      <p><strong>Correo:</strong> {{ submittedUser.email }}</p>
+      <p><strong>Usuario:</strong> {{ submittedUser.username }}</p>
+      <p><strong>Edad:</strong> {{ submittedUser.age }}</p>
+    </section>
+  }
+</main>
